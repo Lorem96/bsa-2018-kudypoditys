@@ -94,9 +94,9 @@ let RegistrationForm = props => {
                         type="text"
                         label="Ukraine"
                         icon="map marker"
-                        validate={[required, maxLength20]} />
-                    <CardDescription><br />City</CardDescription>
-                     <Field
+                        validate={[required, maxLength20]}/>
+                    <CardDescription><br/>City</CardDescription>
+                    <Field
                         name="address"
                         component={semanticSelectorFormField}
                         as={Form.Select}
