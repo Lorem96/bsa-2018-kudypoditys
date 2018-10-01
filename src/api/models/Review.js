@@ -1,40 +1,36 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let Review = orm.define('review', {
+let Review = orm.define("review", {
     pros: {
         type: Sequelize.TEXT
-
     },
     cons: {
         type: Sequelize.TEXT
-
     },
 
     Cleanliness: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.FLOAT
     },
     Price: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.FLOAT
     },
     Comfort: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.FLOAT
     },
     Facilities: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.FLOAT
     },
     Location: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.FLOAT
     },
 
     avgReview: {
-        type: Sequelize.FLOAT,
+        type: Sequelize.FLOAT
     },
     anon: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.BOOLEAN
     }
-
 });
 
 module.exports = Review;

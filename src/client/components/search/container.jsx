@@ -1,4 +1,8 @@
-import { searchUpdate, searchSubmit, clearSearchPageSlice } from '../../logic/search/actions';
+import {
+    searchUpdate,
+    searchSubmit,
+    clearSearchPageSlice
+} from "../../logic/search/actions";
 
 export function mapStateToProps(state, ownProps) {
     const { search } = state;

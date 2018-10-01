@@ -9,18 +9,15 @@
     background-color: #465672;
 }
 .ui.progress {
-
     background: #eceef0;
 }
 
 .ui.comments .comment .comments {
-    margin: 0 0 .5em;
+    margin: 0 0 0.5em;
     padding: 1em 0 1em;
 }
 
-
-
-.ratingLabel{
+.ratingLabel {
     display: block;
     width: 2.5em;
     height: auto;
@@ -28,10 +25,11 @@
     margin-left: 10px;
 }
 
-.ratingLabel .ui.purple.label, .ratingLabel .ui.purple.labels  .label {
-    background-color: #465672!important;
-    border-color: #a333c8!important;
-    color: #fff!important;
+.ratingLabel .ui.purple.label,
+.ratingLabel .ui.purple.labels .label {
+    background-color: #465672 !important;
+    border-color: #a333c8 !important;
+    color: #fff !important;
     border-radius: 0;
 }
 .ui.comments .comment .author {
@@ -85,7 +83,7 @@
     -o-transition: 0.2s;
     transition: 0.2s;
 }
-.reviews_add_review__modal{
+.reviews_add_review__modal {
     min-width: 500px;
 }
 .reviews_header {
@@ -94,7 +92,6 @@
     padding: 10px;
     line-height: 1.2;
     color: rgb(70, 86, 114);
-
 }
 
 .reviews_header > .ui.header {
@@ -121,13 +118,12 @@
 .actions {
     text-align: -webkit-center;
 }
-.ui.comments .comment .avatar img, .ui.comments .comment img.avatar {
-
+.ui.comments .comment .avatar img,
+.ui.comments .comment img.avatar {
     border-radius: 50%;
 }
 
 .ratingName {
-
     opacity: 0.5;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -143,7 +139,6 @@
 }
 
 .reviewsNumber {
-
     opacity: 0.27;
     font-family: Arial, sans-serif;
     font-size: 11px;
@@ -160,7 +155,6 @@
 }
 
 .rating_num {
-
     opacity: 0.8;
     font-family: Arial, sans-serif;
     font-size: 38px;
@@ -176,14 +170,13 @@
 }
 .rating_block {
     display: flex;
-
 }
 .rating_status {
-   padding-top: 17px;
+    padding-top: 17px;
 }
-.close_icon  {
+.close_icon {
     position: relative;
-    left: 87%;;
+    left: 87%;
     cursor: pointer;
     padding-bottom: 10px;
 }

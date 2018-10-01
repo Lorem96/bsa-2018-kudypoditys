@@ -1,4 +1,4 @@
-const Service = require('./generalService');
+const Service = require("./generalService");
 const roomDiscountRepository = require("../repositories/roomDiscountRepository");
 
 class RoomDiscountService extends Service {
@@ -15,11 +15,11 @@ class RoomDiscountService extends Service {
     }
 
     updateRoomDiscount(id, roomDiscount) {
-        return roomDiscountRepository.updateById({_id: id}, roomDiscount);
+        return roomDiscountRepository.updateById({ _id: id }, roomDiscount);
     }
 
     deleteRoomDiscount(id) {
-        return roomDiscountRepository.deleteById({_id: id});
+        return roomDiscountRepository.deleteById({ _id: id });
     }
 }
 

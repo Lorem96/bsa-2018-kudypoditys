@@ -1,4 +1,4 @@
-const Service = require('./generalService');
+const Service = require("./generalService");
 const discountRepository = require("../repositories/discountRepository");
 
 class DiscountService extends Service {
@@ -15,13 +15,12 @@ class DiscountService extends Service {
     }
 
     updateDiscount(id, discount) {
-        return discountRepository.updateById({_id: id}, discount);
+        return discountRepository.updateById({ _id: id }, discount);
     }
 
     deleteDiscount(id) {
-        return discountRepository.deleteById({_id: id});
+        return discountRepository.deleteById({ _id: id });
     }
 }
-
 
 module.exports = new DiscountService(discountRepository);

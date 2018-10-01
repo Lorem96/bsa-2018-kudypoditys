@@ -1,8 +1,7 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let PropertyType = orm.define('propertyType', {
+let PropertyType = orm.define("propertyType", {
     name: {
         type: Sequelize.STRING,
         validate: { notEmpty: true },

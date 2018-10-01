@@ -1,5 +1,5 @@
-import defaultState from 'client/logic/defaultState';
-import {RANKING_BAR_UPDATE} from './actionTypes';
+import defaultState from "client/logic/defaultState";
+import { RANKING_BAR_UPDATE } from "./actionTypes";
 
 function sortTypeReducer(state = defaultState.sortType, action) {
     switch (action.type) {

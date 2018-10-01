@@ -1,11 +1,9 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let FacilityCategory = orm.define('facilityCategory', {
+let FacilityCategory = orm.define("facilityCategory", {
     name: {
         type: Sequelize.STRING
-
     }
 });
 

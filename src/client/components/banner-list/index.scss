@@ -1,10 +1,10 @@
-.container{
+.container {
     width: 1060px;
     margin: 0 auto;
 }
-.banner{
-    color:white;
-    background: rgba(223,227,235, 0.7);
+.banner {
+    color: white;
+    background: rgba(223, 227, 235, 0.7);
     padding: 3px;
     position: relative;
     cursor: pointer;
@@ -16,32 +16,33 @@
 }
 .transition {
     transition: 0.5s;
-  }
-.banner:hover, a:focus {
-    top: -3px;
-    background: rgba(255,255,255, 1);
-    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.2 );
 }
-.banner__content{
+.banner:hover,
+a:focus {
+    top: -3px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.2);
+}
+.banner__content {
     // padding:20px;
     // border-radius: 4px;
     height: 240px;
 }
-.banner__title{
-    padding: 20px 0px 0px 20px
+.banner__title {
+    padding: 20px 0px 0px 20px;
 }
-.banner__subtitle{
-    padding: 0px 0px 0px 20px
+.banner__subtitle {
+    padding: 0px 0px 0px 20px;
 }
-.banner__rectangle{
+.banner__rectangle {
     height: 50px;
     width: 100%;
-    background-color: rgba(0,0,0,.55);
+    background-color: rgba(0, 0, 0, 0.55);
     position: relative;
     top: 123px;
 }
 
-.banner___flag{
+.banner___flag {
     width: 30px;
     padding-left: 9px;
     height: 30px;
@@ -52,13 +53,12 @@
     left: 10px;
 }
 
-.banner__title{
-    font-size:30px;
+.banner__title {
+    font-size: 30px;
     display: inline-flex;
     align-items: center;
     margin-bottom: 10px;
 }
-
 
 .banner__avgprice {
     float: right;
@@ -76,13 +76,12 @@
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 10px;
-    font-family: ArialMT,sans-serif;
+    font-family: ArialMT, sans-serif;
     font-weight: 600;
     opacity: 1;
-
 }
 
-.shortParagraphImg{
+.shortParagraphImg {
     padding: 7px;
 }
 .avgPrice {

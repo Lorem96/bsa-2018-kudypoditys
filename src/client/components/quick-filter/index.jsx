@@ -12,7 +12,6 @@ import queryString from "query-string";
 import { ratingScore, bedTypes, priceScore, bedsType } from "./filters";
 
 class Quickfilter extends React.Component {
-
     handleChange = (e, data) => {
         if (history.location.search !== "") {
             let searchRequest = queryString.parse(history.location.search);
@@ -21,36 +20,36 @@ class Quickfilter extends React.Component {
             this.props.selectFilter({ ...searchRequest, ...{ [item]: value } });
         }
     };
-    clearFilter = ()=>{
+    clearFilter = () => {
         if (history.location.search !== "") {
             let searchRequest = queryString.parse(history.location.search);
-            searchRequest.Wonderful = ""
-            searchRequest.Very_Good = ""
-            searchRequest.Good= ""
-            searchRequest.Pleasant = ""
-            searchRequest.Its_Ok = ""
-            searchRequest.No_rating = ""
-            searchRequest.US0_US30 = ""
-            searchRequest.US30_US60 = ""
-            searchRequest.US60_US90 = ""
-            searchRequest.US90 = ""
-            searchRequest.Queen_bed = ""
-            searchRequest.Twin_bed = ""
-            searchRequest.Full_bed = ""
-            searchRequest.King_bed = ""
-            searchRequest.Fitness_spa_locker_rooms = ""
-            searchRequest.Full_body_massage = ""
-            searchRequest.Daily_maid_service= ""
-            searchRequest.Laundry = ""
-            searchRequest.Walking_tours = ""
-            searchRequest.Live_music_performance = ""
-            searchRequest.Live_sport_events = ""
-            searchRequest.Themed_dinner_nights = ""
-            searchRequest.Movie_nights = ""
-            searchRequest.Dogs = ""
-            this.props.selectFilter(searchRequest)
+            searchRequest.Wonderful = "";
+            searchRequest.Very_Good = "";
+            searchRequest.Good = "";
+            searchRequest.Pleasant = "";
+            searchRequest.Its_Ok = "";
+            searchRequest.No_rating = "";
+            searchRequest.US0_US30 = "";
+            searchRequest.US30_US60 = "";
+            searchRequest.US60_US90 = "";
+            searchRequest.US90 = "";
+            searchRequest.Queen_bed = "";
+            searchRequest.Twin_bed = "";
+            searchRequest.Full_bed = "";
+            searchRequest.King_bed = "";
+            searchRequest.Fitness_spa_locker_rooms = "";
+            searchRequest.Full_body_massage = "";
+            searchRequest.Daily_maid_service = "";
+            searchRequest.Laundry = "";
+            searchRequest.Walking_tours = "";
+            searchRequest.Live_music_performance = "";
+            searchRequest.Live_sport_events = "";
+            searchRequest.Themed_dinner_nights = "";
+            searchRequest.Movie_nights = "";
+            searchRequest.Dogs = "";
+            this.props.selectFilter(searchRequest);
         }
-    }
+    };
     drawBoxes(arr) {
         let searchRequest;
         if (history.location.search !== "") {
@@ -78,7 +77,9 @@ class Quickfilter extends React.Component {
         return (
             <div className="box">
                 <div className="box_header">
-                    <div onClick={this.clearFilter} className="Clear__filter">Clear filters</div>
+                    <div onClick={this.clearFilter} className="Clear__filter">
+                        Clear filters
+                    </div>
                 </div>
 
                 <p className="box_group">Facility</p>

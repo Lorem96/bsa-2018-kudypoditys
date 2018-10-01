@@ -1,5 +1,5 @@
-import { propertyCreate } from 'client/logic/property-registration/actions'
-import { facilitiesGet } from 'client/logic/facilities/actions';
+import { propertyCreate } from "client/logic/property-registration/actions";
+import { facilitiesGet } from "client/logic/facilities/actions";
 
 export function mapStateToProps(state) {
     const { propertyRegistration, facilities, header } = state;
@@ -17,6 +17,6 @@ export function mapDispatchToProps(dispatch) {
         },
         getFacilities() {
             dispatch(facilitiesGet());
-        },
-    }
+        }
+    };
 }

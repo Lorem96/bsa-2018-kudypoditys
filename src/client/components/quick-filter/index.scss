@@ -1,16 +1,13 @@
 .box {
-
     width: 250px;
 
     border-right: 1px solid #979797;
     background-color: #fff;
-
 }
 
 .box_header {
-
     padding: 5px 10px;
-    background-color: #fff;;
+    background-color: #fff;
 
     font-family: Arial, sans-serif;
     font-size: 12px;
@@ -38,7 +35,7 @@
 .box_group {
     border-top: 1px solid #979797;
     margin-right: 20px;
-    font-size:20px;
+    font-size: 20px;
     margin-bottom: 0;
     opacity: 0.8;
     font-family: Arial, sans-serif;
@@ -96,12 +93,11 @@
     color: #182c4f;
 }
 .Clear__filter:hover {
-   text-decoration: underline;
+    text-decoration: underline;
 }
 
-
-
-.ui.checkbox .box:before, .ui.checkbox label:before {
+.ui.checkbox .box:before,
+.ui.checkbox label:before {
     border-radius: 0;
 }
 .ui.input.checkbox {

@@ -3,7 +3,7 @@ import * as actionTypes from "./actionTypes";
 import authService from "client/services/authService";
 import history from "client/history";
 import { registerSuccess, registerFailure } from "./actions";
-import { modalShow } from 'client/logic/simple-modal/actions';
+import { modalShow } from "client/logic/simple-modal/actions";
 
 function* signup(action) {
     try {
@@ -16,7 +16,7 @@ function* signup(action) {
         );
         history.push("/");
 
-        yield put(modalShow(getSuccessSignUp()))
+        yield put(modalShow(getSuccessSignUp()));
     } catch (err) {
         yield put(registerFailure({ error: true, message: err.message }));
     }
@@ -27,7 +27,7 @@ export default function* signUpSaga() {
 }
 
 const getSuccessSignUp = () => ({
-    header: 'Sign up success!',
+    header: "Sign up success!",
     content: `
         You have successfully created your account.
         Now, to complete your registration you need to verify your email.
@@ -35,9 +35,9 @@ const getSuccessSignUp = () => ({
         Please follow link in email.`,
     buttons: [
         {
-            content: 'OK',
-            icon: 'check',
-            positive: true,
-        },
+            content: "OK",
+            icon: "check",
+            positive: true
+        }
     ]
 });

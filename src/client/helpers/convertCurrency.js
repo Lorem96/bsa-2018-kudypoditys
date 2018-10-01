@@ -24,6 +24,10 @@ export function convert(currentCurrency, value, tagetCurrency) {
 
     if (from === to) return value;
 
-    return converterObj[from] && converterObj[from][to] &&
-        round(converterObj[from][to] * value) || value;
+    return (
+        (converterObj[from] &&
+            converterObj[from][to] &&
+            round(converterObj[from][to] * value)) ||
+        value
+    );
 }

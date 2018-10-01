@@ -218,7 +218,7 @@ export class MainSearch extends React.Component {
 
     componentWillMount() {
         this.resetComponent();
-    };
+    }
     componentWillUnmount() {
         this.props.clearSearchPageSlice();
     }

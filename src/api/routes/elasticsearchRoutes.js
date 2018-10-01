@@ -8,11 +8,10 @@ elastic.route("/ping").get((req, res) => {
     ES_service.ping(req, res);
 });
 
-elastic.route("/index/init")
-    .post((req, res) => {
-        const { index } = req.body;
-        ES_service.initIndex(req, res, index);
-    });
+elastic.route("/index/init").post((req, res) => {
+    const { index } = req.body;
+    ES_service.initIndex(req, res, index);
+});
 
 elastic.route("/init").post((req, res) => {
     elasticService.indexData();
@@ -41,7 +40,7 @@ elastic.route("/update").post((req, res) => {
 elastic.route("/search").get((req, res) => {
     const { index, type, query } = req.query;
     const fields = ["name", "city"];
-    ES_service.search(req, res, index, type, query, fields)
+    ES_service.search(req, res, index, type, query, fields);
 });
 
 elastic.route("/autocomplete").get((req, res) => {
@@ -59,10 +58,10 @@ elastic.route("/delete_all").post((req, res) => {
     ES_service.deleteAll(req, res);
 });
 elastic.route("/add_property").post((req, res) => {
-    const {property} = req.body
+    const { property } = req.body;
     elasticService.indexNewAddedProperty(property).then(responce => {
-        res.json(responce)
-    })
+        res.json(responce);
+    });
 });
 
 module.exports = elastic;

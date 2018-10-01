@@ -1,8 +1,7 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let RoomDiscount = orm.define('roomDiscount', {
+let RoomDiscount = orm.define("roomDiscount", {
     discountStart: {
         type: Sequelize.DATE,
         validate: { isDate: true },

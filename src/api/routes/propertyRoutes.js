@@ -103,21 +103,20 @@ property.route("/city/:id").get((req, res) => {
     propertyService
         .getPropertiesByCity(req.params.id)
         .then(properties => {
-
             let roomAmount = 0;
             let totalPrice = 0;
             let avgPrice = 0,
-                name = '',
-                imageUrl= '',
-                id
+                name = "",
+                imageUrl = "",
+                id;
             for (const property of properties) {
                 for (const room of property.rooms) {
                     totalPrice += Number(room.price);
                 }
                 roomAmount++;
                 name = property.city.dataValues.name;
-                imageUrl = property.city.dataValues.imageUrl
-                id = property.city.dataValues.id
+                imageUrl = property.city.dataValues.imageUrl;
+                id = property.city.dataValues.id;
             }
             avgPrice = (totalPrice / roomAmount).toFixed(0);
             const data = {

@@ -1,5 +1,5 @@
-const Repository = require('./generalRepository');
-const scoreByCategoryModel = require('../models/ScoreByCategory');
+const Repository = require("./generalRepository");
+const scoreByCategoryModel = require("../models/ScoreByCategory");
 
 class ScoreByCategoryRepository extends Repository {
     //todo additional methods for repository

@@ -16,15 +16,14 @@ export class RankingBar extends React.Component {
     componentDidMount() {
         if (history.location.search !== "") {
             const searchRequest = queryString.parse(history.location.search);
-            this.setState({ searchRequest: searchRequest })
-
+            this.setState({ searchRequest: searchRequest });
         }
     }
     handleItemClick = (event, value) => {
         if (history.location.search !== "") {
             const searchRequest = queryString.parse(history.location.search);
             searchRequest.sortBy = value.value;
-            this.setState(searchRequest)
+            this.setState(searchRequest);
             this.props.onSelect(searchRequest);
         }
     };
@@ -49,7 +48,7 @@ export class RankingBar extends React.Component {
                         onClick={this.handleItemClick}
                     />
                     <Dropdown
-                        style={{ width:70, border: 0 }}
+                        style={{ width: 70, border: 0 }}
                         item
                         text="Stars"
                         simple
@@ -61,7 +60,7 @@ export class RankingBar extends React.Component {
                                 active={sortBy === HIGH_RANK}
                                 onClick={this.handleItemClick}
                             >
-                            stars [1→5]
+                                stars [1→5]
                             </Dropdown.Item>
                             <Dropdown.Item
                                 value={LOW_RANK}

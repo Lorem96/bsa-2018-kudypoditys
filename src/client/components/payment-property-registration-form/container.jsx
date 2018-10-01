@@ -1,16 +1,16 @@
-import { paymentTypesGet } from 'client/logic/payment-type/actions';
+import { paymentTypesGet } from "client/logic/payment-type/actions";
 
-export const mapStateToProps = (state) => {
+export const mapStateToProps = state => {
     const { paymentTypes } = state;
     return {
         paymentTypes: paymentTypes.paymentTypes || []
-    }
+    };
 };
 
-export const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = dispatch => {
     return {
         getPaymentTypes() {
-            dispatch(paymentTypesGet())
+            dispatch(paymentTypesGet());
         }
-    }
-}
+    };
+};

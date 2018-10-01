@@ -1,6 +1,6 @@
-import { countriesGet } from 'client/logic/countries/actions';
-import { currenciesGet } from 'client/logic/currencies/actions';
-import { propertyTypesGet } from 'client/logic/property-type/actions';
+import { countriesGet } from "client/logic/countries/actions";
+import { currenciesGet } from "client/logic/currencies/actions";
+import { propertyTypesGet } from "client/logic/property-type/actions";
 
 export function mapStateToProps(state) {
     const { countries, currencies, propertyTypes } = state;
@@ -8,19 +8,19 @@ export function mapStateToProps(state) {
         countries: countries.countries || [],
         currencies: currencies.currencies || [],
         propertyTypes: propertyTypes.propertyTypes || []
-    }
+    };
 }
 
 export function mapDispatchToProps(dispatch) {
     return {
         getCountries() {
-            dispatch(countriesGet())
+            dispatch(countriesGet());
         },
         getCurrencies() {
-            dispatch(currenciesGet())
+            dispatch(currenciesGet());
         },
         getPropertyTypes() {
-            dispatch(propertyTypesGet())
-        },
-    }
+            dispatch(propertyTypesGet());
+        }
+    };
 }

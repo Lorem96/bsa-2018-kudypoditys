@@ -1,11 +1,6 @@
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
-
-let Favoritе = orm.define('favoritе', {
-
-});
-
+let Favoritе = orm.define("favoritе", {});
 
 module.exports = Favoritе;

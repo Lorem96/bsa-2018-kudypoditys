@@ -92,7 +92,7 @@ export class addReviewForm extends React.Component {
             propertyId: property.id
         });
         history.push(`/property/${property.id}`);
-        window.location.reload()
+        window.location.reload();
 
         // this.props.getProperty(property.id);
     };
@@ -127,11 +127,9 @@ export class addReviewForm extends React.Component {
                 </Transition>
                 <Transition visible={visible} animation="scale" duration={500}>
                     <div>
-                        <div
-                            className="close_icon"
-                            onClick={this.handleClose}
-                        >
-                            <Icon name="close" size="large" />Close
+                        <div className="close_icon" onClick={this.handleClose}>
+                            <Icon name="close" size="large" />
+                            Close
                         </div>
                         <RatingForm
                             onSelect={this.handleRate}
@@ -181,7 +179,6 @@ export class addReviewForm extends React.Component {
                                 onClick={this.toggleVisibility}
                             />
                         </div>
-
                     </div>
                 </Transition>
             </Form>

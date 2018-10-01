@@ -10,7 +10,7 @@ export default class MapWidgetModal extends Component {
     };
 
     render() {
-       const {fullScreen} = this.props;
+        const { fullScreen } = this.props;
         return (
             <React.Fragment>
                 <Modal
@@ -30,7 +30,6 @@ export default class MapWidgetModal extends Component {
                 >
                     <Modal.Content style={{ width: "100%", height: "100%" }}>
                         <MapView
-
                             properties={this.props.properties}
                             startPosition={this.props.startPosition}
                             zoom={13}

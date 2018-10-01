@@ -1,23 +1,26 @@
-#registration-form, #login-form, #forgot-password-form, #reset-password-form{
-.input{
-    height: auto;
-    input{
-      padding: 15px;
-      border-radius: 0px;
+#registration-form,
+#login-form,
+#forgot-password-form,
+#reset-password-form {
+    .input {
+        height: auto;
+        input {
+            padding: 15px;
+            border-radius: 0px;
+        }
+        margin: 15px 0 15px 0;
     }
-    margin: 15px 0 15px 0;  
-  }
-  .btn-wrapper{
-      display: flex;
-      justify-content: space-between;
-  }
-  .ui.red.pointing.below.basic.label.shown{
-      margin-bottom: -4px;
-  }
+    .btn-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .ui.red.pointing.below.basic.label.shown {
+        margin-bottom: -4px;
+    }
 
-    .field-wrapper{
+    .field-wrapper {
         position: relative;
-        .ui.red.basic.label.shown{
+        .ui.red.basic.label.shown {
             position: absolute;
             white-space: nowrap;
             z-index: 100;
@@ -27,23 +30,20 @@
     }
 }
 
-.ui.segment{
-
-&.registartion_form-wrapper,
-&.login_form-wrapper,
-&.forgot_form-wrapper {
-    width: 65%;
-    margin: auto;
-    border-radius: 0px;
+.ui.segment {
+    &.registartion_form-wrapper,
+    &.login_form-wrapper,
+    &.forgot_form-wrapper {
+        width: 65%;
+        margin: auto;
+        border-radius: 0px;
+    }
 }
 
-}
-
-.auth_btn{
+.auth_btn {
     border-radius: 0px;
 }
 
 .ui.basic.red.label {
     background-color: #fff !important;
 }
-

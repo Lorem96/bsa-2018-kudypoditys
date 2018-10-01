@@ -32,7 +32,7 @@ function associations(models) {
         PropertyLanguage,
         Language,
         Availability,
-        Currency,
+        Currency
     } = models;
 
     // console.log(models);
@@ -211,8 +211,8 @@ function associations(models) {
     Room.belongsToMany(BedType, { through: "bedInRoom" });
     BedType.belongsToMany(Room, { through: "bedInRoom" });
 
-    Property.belongsToMany(Language, { through: 'propertyLanguage' });
-    Language.belongsToMany(Property, { through: 'propertyLanguage' });
+    Property.belongsToMany(Language, { through: "propertyLanguage" });
+    Language.belongsToMany(Property, { through: "propertyLanguage" });
 
     // Image.findAll({ include: [{ model: Room }] }) :D
     // image = { propertyId: 1, roomId: 1 } room = { id: 1, propertyId: 2 }

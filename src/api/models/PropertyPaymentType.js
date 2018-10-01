@@ -1,11 +1,9 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let PropertyPaymentType = orm.define('propertyPaymentType', {
+let PropertyPaymentType = orm.define("propertyPaymentType", {
     name: {
         type: Sequelize.STRING
-
     }
 });
 

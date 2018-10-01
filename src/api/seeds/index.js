@@ -22,7 +22,6 @@ const {
     LANGUAGES,
     CURRENCIES,
     AVAILABILITY
-
 } = require("./seed");
 
 let TEMP = [
@@ -41,19 +40,16 @@ let TEMP = [
         cityId: 2,
         accommodationRuleId: 1
     }
-
-
-]
-function calc(){
-    let Arr = []
+];
+function calc() {
+    let Arr = [];
 
     PROPERTIES.forEach(prop => {
         let propReviewArr = [];
 
-
         REVIEWS.forEach(review => {
             if (review.propertyId === prop.id) {
-                propReviewArr.push(review.avgReview)
+                propReviewArr.push(review.avgReview);
             }
         });
         let total = 0;
@@ -63,20 +59,16 @@ function calc(){
         }
         avg = total / propReviewArr.length;
         if (isNaN(avg)) {
-            avg =  0
+            avg = 0;
         }
 
-        prop.rating = JSON.parse( avg.toFixed(1));
+        prop.rating = JSON.parse(avg.toFixed(1));
 
-
-        TEMP.push(prop)
-        console.log(TEMP)
-    })
-
-
+        TEMP.push(prop);
+        console.log(TEMP);
+    });
 }
 calc();
-
 
 function upsertAllData(models) {
     const upsertPromises = [];
@@ -106,10 +98,6 @@ function upsertAllData(models) {
         Currency,
         Availability
     } = models;
-
-
-
-
 
     const SimpleUpsertMap = [
         [PaymentType, PAYMENT_TYPES],

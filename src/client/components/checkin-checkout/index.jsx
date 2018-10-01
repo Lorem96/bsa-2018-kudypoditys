@@ -1,17 +1,21 @@
-import React, { Fragment, Component } from 'react';
-import './index.scss';
-import { Container, Form, Header, Grid } from 'semantic-ui-react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import DrawInputs from './DrawInputs'
-import { mapStateToProps, mapDispatchToProps } from './container';
+import React, { Fragment, Component } from "react";
+import "./index.scss";
+import { Container, Form, Header, Grid } from "semantic-ui-react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import DrawInputs from "./DrawInputs";
+import { mapStateToProps, mapDispatchToProps } from "./container";
 
 export class CheckInCheckOut extends Component {
     handleClick = (e, value) => {
         e.preventDefault();
 
         const {
-            arrivalFrom, arrivalTo, departureFrom, departureTo, input
+            arrivalFrom,
+            arrivalTo,
+            departureFrom,
+            departureTo,
+            input
         } = this.props;
 
         input.onChange({
@@ -29,84 +33,80 @@ export class CheckInCheckOut extends Component {
 
     render() {
         const {
-            arrivalFrom, arrivalTo, departureFrom, departureTo
+            arrivalFrom,
+            arrivalTo,
+            departureFrom,
+            departureTo
         } = this.props;
         return (
             <Fragment>
                 <Grid>
                     <Grid.Row>
                         <Grid.Column width={8}>
-                            <Header as='h3'>
-                                <span className="required">Guest arrival time</span>
+                            <Header as="h3">
+                                <span className="required">
+                                    Guest arrival time
+                                </span>
                                 <Header.Subheader>From:</Header.Subheader>
                             </Header>
 
-
-                            <Form.Group widths='equal'>
+                            <Form.Group widths="equal">
                                 <DrawInputs
                                     active={arrivalFrom}
-                                    type={'arrivalFrom'}
+                                    type={"arrivalFrom"}
                                     handleClick={this.handleClick}
                                 />
                             </Form.Group>
                         </Grid.Column>
                         <Grid.Column width={8}>
-                            <Header as='h3' >
-                                <span className="required">Guest departure time</span>
+                            <Header as="h3">
+                                <span className="required">
+                                    Guest departure time
+                                </span>
                                 <Header.Subheader>From:</Header.Subheader>
                             </Header>
-
 
                             <Form.Group widths="equal">
                                 <DrawInputs
                                     active={departureFrom}
                                     handleClick={this.handleClick}
-                                    type={'departureFrom'}
+                                    type={"departureFrom"}
                                 />
-
                             </Form.Group>
                         </Grid.Column>
                     </Grid.Row>
 
                     <Grid.Row>
                         <Grid.Column width={8}>
-                            <Header as='h3'>
-
+                            <Header as="h3">
                                 <Header.Subheader>To:</Header.Subheader>
                             </Header>
 
-                            <Form.Group widths='equal'>
-
+                            <Form.Group widths="equal">
                                 <DrawInputs
                                     active={arrivalTo}
                                     handleClick={this.handleClick}
-                                    type={'arrivalTo'}
+                                    type={"arrivalTo"}
                                 />
-
                             </Form.Group>
                         </Grid.Column>
                         <Grid.Column width={8}>
-                            <Header as='h3'>
-
+                            <Header as="h3">
                                 <Header.Subheader>To:</Header.Subheader>
                             </Header>
 
-
-                            <Form.Group widths='equal'>
-
+                            <Form.Group widths="equal">
                                 <DrawInputs
                                     active={departureTo}
                                     handleClick={this.handleClick}
-                                    type={'departureTo'}
+                                    type={"departureTo"}
                                 />
-
                             </Form.Group>
-
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
             </Fragment>
-        )
+        );
     }
 }
 
@@ -117,4 +117,7 @@ CheckInCheckOut.propTypes = {
     departureTo: PropTypes.string
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CheckInCheckOut);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(CheckInCheckOut);

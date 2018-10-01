@@ -1,5 +1,5 @@
-const Repository = require('./generalRepository');
-const cityModel = require('../models/City');
+const Repository = require("./generalRepository");
+const cityModel = require("../models/City");
 const Country = require("../models/Country");
 
 class CityRepository extends Repository {
@@ -17,6 +17,5 @@ class CityRepository extends Repository {
             });
     }
 }
-
 
 module.exports = new CityRepository(cityModel);

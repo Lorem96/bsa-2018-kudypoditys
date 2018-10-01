@@ -1,8 +1,7 @@
-const Repository = require('./generalRepository');
+const Repository = require("./generalRepository");
 
-const Currency = require('../models/Currency');
+const Currency = require("../models/Currency");
 
-class CurrencyRepository extends Repository {
-}
+class CurrencyRepository extends Repository {}
 
 module.exports = new CurrencyRepository(Currency);

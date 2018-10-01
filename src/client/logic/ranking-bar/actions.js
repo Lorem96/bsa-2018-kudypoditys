@@ -1,6 +1,4 @@
-import {
-    RANKING_BAR_UPDATE
-} from './actionTypes';
+import { RANKING_BAR_UPDATE } from "./actionTypes";
 
 export function sortUpdate(payload) {
     return {

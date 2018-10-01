@@ -1,10 +1,7 @@
-const
-    apiRoot = '.',
-    models = require(apiRoot + '/models');
+const apiRoot = ".",
+    models = require(apiRoot + "/models");
 
 module.exports = () => {
-
-
     // models.then(({
     //     Role
     // }) => {
@@ -14,7 +11,6 @@ module.exports = () => {
     //         //Role.findAll().then(console.log);
     //     });
     // });
-
     // models.then(({
     //     RoomType
     // }) => {
@@ -24,7 +20,6 @@ module.exports = () => {
     //         //RoomType.findAll().then(console.log);
     //     });
     // });
-
     // models.then(({
     //     Room
     // }) => {
@@ -37,8 +32,6 @@ module.exports = () => {
     //         //Room.findAll().then(console.log);
     //     });
     // });
-
-
     // models.then(({ Reservation, User }) => {
     //     User.create({
     //         fullName: 'Doctor Strange',
@@ -62,6 +55,4 @@ module.exports = () => {
     //         });
     //     }).then(console.log);
     // });
-
 };
-

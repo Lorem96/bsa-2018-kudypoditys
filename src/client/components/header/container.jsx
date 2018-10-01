@@ -1,11 +1,11 @@
-import { selectCurrency, logout } from 'client/logic/header/actions';
-import { currenciesGet } from 'client/logic/currencies/actions';
+import { selectCurrency, logout } from "client/logic/header/actions";
+import { currenciesGet } from "client/logic/currencies/actions";
 
 export function mapStateToProps(state, ownProps) {
     const { currencies } = state;
     return {
         ...state.header,
-        currencies: currencies.currencies || [],
+        currencies: currencies.currencies || []
     };
 }
 

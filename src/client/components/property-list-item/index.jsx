@@ -22,7 +22,7 @@ import {
     getAvgFromArray
 } from "client/helpers/avgReviewRating";
 import RatingBlock from "../reviews/ratingBlock";
-import { convert } from '../../helpers/convertCurrency';
+import { convert } from "../../helpers/convertCurrency";
 
 export class PropertyListItem extends React.Component {
     handleRedirectToMap = id => {
@@ -44,7 +44,10 @@ export class PropertyListItem extends React.Component {
 
     render() {
         const {
-            propertyItemData, itemIndex, currency, allCurrencies
+            propertyItemData,
+            itemIndex,
+            currency,
+            allCurrencies
         } = this.props;
 
         const propertyCurrency = propertyItemData.currency.code;
@@ -142,7 +145,6 @@ export class PropertyListItem extends React.Component {
                                     />
                                 </div>
 
-
                                 <div className="rating_listItem">
                                     <RatingBlock
                                         avgPropRating={avgPropRating}
@@ -169,7 +171,8 @@ export class PropertyListItem extends React.Component {
                                         }}
                                         properties={[
                                             {
-                                                currency: propertyItemData.currency,
+                                                currency:
+                                                    propertyItemData.currency,
                                                 price:
                                                     propertyItemData.rooms[0]
                                                         .price,
@@ -222,7 +225,12 @@ export class PropertyListItem extends React.Component {
                                     {propertyItemData.rooms[0].roomType.name}
                                 </div>
                                 <span className="priceInfo">
-                                    {currency.code} {convert(propertyCurrency, propertyItemData.rooms[0].price, currency.code)}
+                                    {currency.code}{" "}
+                                    {convert(
+                                        propertyCurrency,
+                                        propertyItemData.rooms[0].price,
+                                        currency.code
+                                    )}
                                 </span>
                             </div>
 
@@ -245,14 +253,14 @@ export class PropertyListItem extends React.Component {
                                     className="search-page__main-button"
                                     color={
                                         propertyItemData.availableRoomsCount ===
-                                            0
+                                        0
                                             ? "grey"
                                             : "blue"
                                     }
                                     floated="right"
                                     onClick={
                                         propertyItemData.availableRoomsCount ===
-                                            0
+                                        0
                                             ? ""
                                             : this.handleRedirectToDetails
                                     }

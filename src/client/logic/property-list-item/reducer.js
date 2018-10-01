@@ -1,4 +1,4 @@
-import defaultState from 'client/logic/defaultState';
+import defaultState from "client/logic/defaultState";
 import {
     PROPERTY_ITEM_DELETE,
     PROPERTY_ITEM_INSERT,
@@ -6,28 +6,28 @@ import {
     FETCH_PROPERTY_ITEM,
     FETCH_ALL_PROPERTIES,
     FOUND_PROPERTIES_INSERT_ALL
-} from './actionTypes';
+} from "./actionTypes";
 
 function foundPropertiesReducer(state = defaultState.foundProperties, action) {
     switch (action.type) {
-        case PROPERTY_ITEM_DELETE : {
-            const newState = {...state};
-            delete newState.foundProperties[action._id]
+        case PROPERTY_ITEM_DELETE: {
+            const newState = { ...state };
+            delete newState.foundProperties[action._id];
             return newState;
         }
-        case PROPERTY_ITEM_INSERT : {
+        case PROPERTY_ITEM_INSERT: {
             return {
                 ...state.foundProperties,
                 [action._id]: action.payload
             };
         }
-        case FOUND_PROPERTIES_INSERT_ALL : {
+        case FOUND_PROPERTIES_INSERT_ALL: {
             return {
                 ...state.foundProperties,
                 [action._id]: action.payload
             };
         }
-        case  PROPERTY_ITEM_UPDATE: {
+        case PROPERTY_ITEM_UPDATE: {
             return {
                 ...state.foundProperties,
                 [action._id]: {

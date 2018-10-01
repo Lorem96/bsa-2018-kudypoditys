@@ -1,6 +1,5 @@
 module.exports = io => {
-    io.on('connection', socket => {
-
+    io.on("connection", socket => {
         socket.emit("change", `Connected with id: ${socket.id}.`);
 
         socket.join("test");
@@ -10,7 +9,10 @@ module.exports = io => {
         });
 
         socket.on("disconnect", () => {
-            io.to("test").emit("change", `Socket ${socket.id} has been disconnected!`);
+            io.to("test").emit(
+                "change",
+                `Socket ${socket.id} has been disconnected!`
+            );
         });
     });
 };

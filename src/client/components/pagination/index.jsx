@@ -14,35 +14,33 @@ class Pagination extends React.Component {
         }
     };
     render() {
-
         let searchRequest = {};
         if (history.location.search !== "") {
             searchRequest = queryString.parse(history.location.search);
         }
-        let currentPage=Number(searchRequest.page)
+        let currentPage = Number(searchRequest.page);
         return (
-
             <SemanticPagination
                 defaultActivePage={1}
                 firstItem={{
                     "aria-label": "First item",
                     content: "«",
-                    disabled:currentPage=== 1
+                    disabled: currentPage === 1
                 }}
                 lastItem={{
                     "aria-label": "Last item",
                     content: "»",
-                    disabled: currentPage===Math.ceil(this.props.pagesCount)
+                    disabled: currentPage === Math.ceil(this.props.pagesCount)
                 }}
                 prevItem={{
                     "aria-label": "Previous item",
                     content: "⟨",
-                    disabled: currentPage=== 1
+                    disabled: currentPage === 1
                 }}
                 nextItem={{
                     "aria-label": "Next item",
                     content: "⟩",
-                    disabled: currentPage=== Math.ceil(this.props.pagesCount)
+                    disabled: currentPage === Math.ceil(this.props.pagesCount)
                 }}
                 totalPages={this.props.pagesCount}
                 onPageChange={this.onPageChange}

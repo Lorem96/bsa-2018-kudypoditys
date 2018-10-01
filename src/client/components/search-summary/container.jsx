@@ -1,8 +1,7 @@
 export function mapStateToProps(state) {
-    const {search} = state;
+    const { search } = state;
 
     return {
-       // destination: search.query,
+        // destination: search.query,
     };
 }
-

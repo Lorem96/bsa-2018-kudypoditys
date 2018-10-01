@@ -1,4 +1,4 @@
-const Service = require('./generalService');
+const Service = require("./generalService");
 const accommodationRuleRepository = require("../repositories/accommodationRuleRepository");
 
 class AccommodationRuleService extends Service {
@@ -15,13 +15,12 @@ class AccommodationRuleService extends Service {
     }
 
     updateAccommodationRule(id, rule) {
-        return accommodationRuleRepository.updateById({_id: id}, rule);
+        return accommodationRuleRepository.updateById({ _id: id }, rule);
     }
 
     deleteAccommodationRule(id) {
-        return accommodationRuleRepository.deleteById({_id: id});
+        return accommodationRuleRepository.deleteById({ _id: id });
     }
 }
-
 
 module.exports = new AccommodationRuleService(accommodationRuleRepository);

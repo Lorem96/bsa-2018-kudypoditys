@@ -1,4 +1,4 @@
-const Service = require('./generalService');
+const Service = require("./generalService");
 const imageRepository = require("../repositories/imageRepository");
 
 class ImageService extends Service {
@@ -15,11 +15,11 @@ class ImageService extends Service {
     }
 
     updateImage(id, image) {
-        return imageRepository.updateById({_id: id}, image);
+        return imageRepository.updateById({ _id: id }, image);
     }
 
     deleteImage(id) {
-        return imageRepository.deleteById({_id: id});
+        return imageRepository.deleteById({ _id: id });
     }
 }
 

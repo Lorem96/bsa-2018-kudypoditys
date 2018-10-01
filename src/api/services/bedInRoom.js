@@ -1,4 +1,4 @@
-const Service = require('./generalService');
+const Service = require("./generalService");
 const bedInRoomRepository = require("../repositories/bedInRoomRepository");
 
 class BedInRoomService extends Service {
@@ -15,11 +15,11 @@ class BedInRoomService extends Service {
     }
 
     updateBedInRoom(id, bedInRoom) {
-        return bedInRoomRepository.updateById({_id: id}, bedInRoom);
+        return bedInRoomRepository.updateById({ _id: id }, bedInRoom);
     }
 
     deleteBedInRoom(id) {
-        return bedInRoomRepository.deleteById({_id: id});
+        return bedInRoomRepository.deleteById({ _id: id });
     }
 }
 

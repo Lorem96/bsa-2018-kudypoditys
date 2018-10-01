@@ -1,8 +1,4 @@
-import {
-    CURENCY_SELECT,
-    CURRENCIES_GET,
-    LOGOUT
-} from './actionTypes';
+import { CURENCY_SELECT, CURRENCIES_GET, LOGOUT } from "./actionTypes";
 
 export function selectCurrency(payload) {
     return {
@@ -14,11 +10,11 @@ export function selectCurrency(payload) {
 export function getCurrencies() {
     return {
         type: CURRENCIES_GET
-    }
+    };
 }
 
 export function logout() {
     return {
         type: LOGOUT
-    }
+    };
 }

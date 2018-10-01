@@ -1,5 +1,5 @@
-import { GET_FACILITIES } from './actionTypes';
+import { GET_FACILITIES } from "./actionTypes";
 
 export const facilitiesGet = () => ({
-  type: GET_FACILITIES
+    type: GET_FACILITIES
 });

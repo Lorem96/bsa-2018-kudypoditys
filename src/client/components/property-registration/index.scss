@@ -5,7 +5,7 @@
 
 #propertyRegistration {
     .required::after {
-        content: ' *';
+        content: " *";
         font-size: 20px;
         font-weight: 900;
         color: red;
@@ -17,7 +17,7 @@
     }
 
     .dropdown {
-        &>i {
+        & > i {
             position: absolute;
             left: 12px;
 
@@ -32,13 +32,13 @@
         border-radius: 0px;
 
         &:not([type="button"]) {
-            background:rgb(2, 143, 197);
+            background: rgb(2, 143, 197);
         }
     }
 
-    .meta{
+    .meta {
         padding: 0px 0 10px 0;
-        color:grey;
+        color: grey;
         font-size: 13px;
-      }
+    }
 }

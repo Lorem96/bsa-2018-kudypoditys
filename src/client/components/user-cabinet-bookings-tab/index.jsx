@@ -70,16 +70,16 @@ export class BookingsTab extends React.Component {
                 />
             </Container>
         ) : (
-                <Container fluid className="bookings-container">
-                    <Header as="h2">Your active bookings</Header>
-                    <Message info>
-                        This list of your bookings, you can see a detailed
-                        description by clicking on the button.
+            <Container fluid className="bookings-container">
+                <Header as="h2">Your active bookings</Header>
+                <Message info>
+                    This list of your bookings, you can see a detailed
+                    description by clicking on the button.
                 </Message>
-                    <Divider section />
-                    {this.getBookings(bookings)}
-                </Container>
-            );
+                <Divider section />
+                {this.getBookings(bookings)}
+            </Container>
+        );
     }
 }
 

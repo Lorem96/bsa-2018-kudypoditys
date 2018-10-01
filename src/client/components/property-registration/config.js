@@ -1,19 +1,24 @@
 import React from "react";
-import BasicInfoPropertyRegistrationForm from '../basic-info-property-registration-form';
+import BasicInfoPropertyRegistrationForm from "../basic-info-property-registration-form";
 
 export const MenuItems = [
     {
         menuItem: {
-            key: 'Basic Info',
-            icon: 'home',
-            content: 'Basic Info',
-            header: ' Rooms and pricing',
-            subheader: 'Start by telling us your property\'s name, contact details and address.',
-            component: <BasicInfoPropertyRegistrationForm onSubmit={(data) => {
-                console.log(data);
-            }} />
+            key: "Basic Info",
+            icon: "home",
+            content: "Basic Info",
+            header: " Rooms and pricing",
+            subheader:
+                "Start by telling us your property's name, contact details and address.",
+            component: (
+                <BasicInfoPropertyRegistrationForm
+                    onSubmit={data => {
+                        console.log(data);
+                    }}
+                />
+            )
         }
-    },
+    }
 
     // {
     //     menuItem: {
@@ -68,5 +73,4 @@ export const MenuItems = [
     //     }
 
     // },
-
 ];

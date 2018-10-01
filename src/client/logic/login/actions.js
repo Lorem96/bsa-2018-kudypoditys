@@ -16,5 +16,5 @@ export function getCurrentUser() {
 export function reset() {
     return {
         type: RESET_LOGIN
-    }
+    };
 }

@@ -1,7 +1,5 @@
-import defaultState from 'client/logic/defaultState';
-import {
-    ROOM_SUMMARY_PRICE_GET
-} from './actionType';
+import defaultState from "client/logic/defaultState";
+import { ROOM_SUMMARY_PRICE_GET } from "./actionType";
 
 function roomSummaryReducer(state = defaultState.rooms, action) {
     switch (action.type) {
@@ -9,10 +7,9 @@ function roomSummaryReducer(state = defaultState.rooms, action) {
             return {
                 ...state.rooms,
                 ...action.payload
-            }
+            };
         default:
             return state;
-
     }
 }
 

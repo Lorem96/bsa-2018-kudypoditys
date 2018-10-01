@@ -1,8 +1,7 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let ScoreByCategory = orm.define('scoreByCategory', {
+let ScoreByCategory = orm.define("scoreByCategory", {
     evaluation: {
         type: Sequelize.DOUBLE,
         validate: { min: 0, max: 10 },

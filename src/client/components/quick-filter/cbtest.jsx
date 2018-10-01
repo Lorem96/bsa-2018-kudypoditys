@@ -1,18 +1,13 @@
-import React, {Component} from 'react';
-import Checkbox from './Checkbox';
-import {bedTypes} from './filters'
+import React, { Component } from "react";
+import Checkbox from "./Checkbox";
+import { bedTypes } from "./filters";
 
-
-const items = [
-    '1',
-    '2',
-    '3',
-];
+const items = ["1", "2", "3"];
 
 class cbtest extends Component {
     componentWillMount = () => {
         this.selectedCheckboxes = new Set();
-    }
+    };
 
     toggleCheckbox = label => {
         if (this.selectedCheckboxes.has(label)) {
@@ -20,7 +15,7 @@ class cbtest extends Component {
         } else {
             this.selectedCheckboxes.add(label);
         }
-    }
+    };
 
     // handleFormSubmit = formSubmitEvent => {
     //     formSubmitEvent.preventDefault();
@@ -36,24 +31,20 @@ class cbtest extends Component {
             handleCheckboxChange={this.toggleCheckbox}
             key={label}
         />
-    )
+    );
 
-    createCheckboxes = () => (
-        bedTypes.map(this.createCheckbox)
-    )
+    createCheckboxes = () => bedTypes.map(this.createCheckbox);
 
     render() {
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12">
-
                         {/*<form onSubmit={this.handleFormSubmit}>*/}
                         {this.createCheckboxes()}
 
                         {/*<button className="btn btn-default" type="submit">Save</button>*/}
                         {/*</form>*/}
-
                     </div>
                 </div>
             </div>

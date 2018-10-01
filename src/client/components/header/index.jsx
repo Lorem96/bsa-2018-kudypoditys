@@ -24,9 +24,8 @@ export class MainHeader extends Component {
             key: x.id,
             value: x.id,
             text: x.codeTitle
-        }))
-
-    };
+        }));
+    }
 
     addPropertyClicked = () => {
         history.push("/add-property");
@@ -53,8 +52,8 @@ export class MainHeader extends Component {
         const currency = currencies.find(x => x.id === value);
         this.props.onCurrencyChange(currency);
 
-        localStorage.setItem('selectedCurrency', JSON.stringify(currency));
-    }
+        localStorage.setItem("selectedCurrency", JSON.stringify(currency));
+    };
 
     // state = { activeItem: "about-us" };
 
@@ -69,8 +68,8 @@ export class MainHeader extends Component {
                 style={
                     noBackground
                         ? {
-                            backgroundImage: "none"
-                        }
+                              backgroundImage: "none"
+                          }
                         : { backgroundColor: "#028fc5" }
                 }
             >
@@ -87,7 +86,7 @@ export class MainHeader extends Component {
                         <Grid.Column width={8} textAlign={"right"}>
                             <Dropdown
                                 style={{
-                                    paddingTop:"6px",
+                                    paddingTop: "6px",
                                     width: "90px",
                                     fontSize: "14px",
                                     background: "none",
@@ -124,7 +123,6 @@ export class MainHeader extends Component {
                                         <Fragment>
                                             {hideSignUpIn ? null : (
                                                 <Fragment>
-
                                                     <a
                                                         style={{
                                                             cursor: "pointer",

@@ -1,26 +1,24 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import { Card, Icon, Image } from "semantic-ui-react";
 import PropTypes from "prop-types";
 import { convert } from "../../helpers/convertCurrency";
 
-
 export class MapPopupItem extends Component {
-
     render() {
         const propertyCurrency = this.props.propertyCurrency;
         const currency = this.props.currency;
 
-        const price = convert(propertyCurrency, this.props.price, currency.code);
-
+        const price = convert(
+            propertyCurrency,
+            this.props.price,
+            currency.code
+        );
 
         return (
-
-
             <Card
                 style={{
-                    minWidth: "100px",
-
+                    minWidth: "100px"
                 }}
             >
                 <Image centered src={this.props.imageSrc} size="medium" />
@@ -58,7 +56,6 @@ export class MapPopupItem extends Component {
                     </a>
                 </Card.Content>
             </Card>
-
         );
     }
 }
@@ -69,24 +66,60 @@ MapPopupItem.propTypes = {
     rating: PropTypes.string
 };
 
-export default connect((state) => ({
+export default connect(state => ({
     currency: state.header.selectedCurrency
 }))(MapPopupItem);
-{/*<Card*/ }
-{/*>*/ }
-{/*<Card.Content>*/ }
-{/*<Card.Header>*/ }
-{/*{this.props.propertyName}*/ }
-{/*</Card.Header>*/ }
-{/*</Card.Content>*/ }
-{/*<Card.Content extra>*/ }
-{/*<a style={{float: "right"}}>*/ }
-{/*<Icon name="money"/>*/ }
-{/*{this.props.price}*/ }
-{/*</a>*/ }
-{/*<a style={{float: "left"}}>*/ }
-{/*<Icon name="star"/>*/ }
-{/*{this.props.rating}*/ }
-{/*</a>*/ }
-{/*</Card.Content>*/ }
-{/*</Card>*/ }
+{
+    /*<Card*/
+}
+{
+    /*>*/
+}
+{
+    /*<Card.Content>*/
+}
+{
+    /*<Card.Header>*/
+}
+{
+    /*{this.props.propertyName}*/
+}
+{
+    /*</Card.Header>*/
+}
+{
+    /*</Card.Content>*/
+}
+{
+    /*<Card.Content extra>*/
+}
+{
+    /*<a style={{float: "right"}}>*/
+}
+{
+    /*<Icon name="money"/>*/
+}
+{
+    /*{this.props.price}*/
+}
+{
+    /*</a>*/
+}
+{
+    /*<a style={{float: "left"}}>*/
+}
+{
+    /*<Icon name="star"/>*/
+}
+{
+    /*{this.props.rating}*/
+}
+{
+    /*</a>*/
+}
+{
+    /*</Card.Content>*/
+}
+{
+    /*</Card>*/
+}

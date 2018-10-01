@@ -1,7 +1,4 @@
-import {
-    ADD_DATA
-} from './actionTypes';
-
+import { ADD_DATA } from "./actionTypes";
 
 export default function propertySubmitReducer(state = {}, action) {
     switch (action.type) {
@@ -9,7 +6,7 @@ export default function propertySubmitReducer(state = {}, action) {
             return {
                 ...state,
                 ...action.payload
-            }
+            };
         }
         default: {
             return state;

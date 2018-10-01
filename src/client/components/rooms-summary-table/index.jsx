@@ -37,7 +37,8 @@ export class RoomsSummaryTable extends React.Component {
         const { currency } = this.props;
         const { currency: propCurrency } = property;
 
-        const priceFunc = (price) => convert(propCurrency.code, price, currency.code);
+        const priceFunc = price =>
+            convert(propCurrency.code, price, currency.code);
 
         return rooms.map(room => (
             <React.Fragment>

@@ -1,5 +1,5 @@
-const Repository = require('./generalRepository');
-const roleModel = require('../models/Role');
+const Repository = require("./generalRepository");
+const roleModel = require("../models/Role");
 
 class RoleRepository extends Repository {
     //todo additional methods for repository

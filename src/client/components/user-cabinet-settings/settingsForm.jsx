@@ -44,7 +44,7 @@ export class SettingsForm extends Component {
     handleAddressChange = suggestion => {
         const value = `${suggestion.name} ${suggestion.administrative} ${
             suggestion.country
-            }`;
+        }`;
         const data = {
             address: value
         };
@@ -126,7 +126,7 @@ export class SettingsForm extends Component {
 
         const currency = this.props.currencies.find(x => x.id == value);
         this.props.onCurrencyChange(currency);
-    }
+    };
 
     handleChange = (e, { name, value }) => {
         const data = {
@@ -171,47 +171,47 @@ export class SettingsForm extends Component {
             currencyOptions,
             appealOptions,
             avatarLoading,
-            selectedCurrency,
+            selectedCurrency
         } = this.props;
         const { active } = this.state;
         const content = avatarLoading ? (
             <Icon loading size="big" name="spinner" />
         ) : (
-                <div>
-                    <ImageUploader
-                        className="personal_settings-avatar"
-                        withPreview={false}
-                        singleImage={true}
-                        withLabel={false}
-                        withIcon={false}
-                        optimisticPreviews
-                        multiple={false}
-                        pseudobuttonContent={
-                            <Icon
-                                circular
-                                title="Add new avatar"
-                                size="big"
-                                name="add"
-                                color="teal"
-                            />
-                        }
-                        buttonText="Update"
-                        buttonClassName="personal_settings-avatar-button"
-                        onChange={this.onDrop}
-                        imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-                        maxFileSize={5242880}
-                    />
-                    {this.props.avatar ? (
-                        <Button
-                            primary
-                            className="avatar_del_btn"
-                            onClick={this.props.avatarDelete}
-                        >
-                            Delete
+            <div>
+                <ImageUploader
+                    className="personal_settings-avatar"
+                    withPreview={false}
+                    singleImage={true}
+                    withLabel={false}
+                    withIcon={false}
+                    optimisticPreviews
+                    multiple={false}
+                    pseudobuttonContent={
+                        <Icon
+                            circular
+                            title="Add new avatar"
+                            size="big"
+                            name="add"
+                            color="teal"
+                        />
+                    }
+                    buttonText="Update"
+                    buttonClassName="personal_settings-avatar-button"
+                    onChange={this.onDrop}
+                    imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                    maxFileSize={5242880}
+                />
+                {this.props.avatar ? (
+                    <Button
+                        primary
+                        className="avatar_del_btn"
+                        onClick={this.props.avatarDelete}
+                    >
+                        Delete
                     </Button>
-                    ) : null}
-                </div>
-            );
+                ) : null}
+            </div>
+        );
         return (
             <Form onSubmit={handleSubmit}>
                 <Segment className="personal_settings-segment">
@@ -399,10 +399,10 @@ export class SettingsForm extends Component {
                                 <p>{this.props.passwordMessage}</p>
                             </Message>
                         ) : (
-                                <Message positive>
-                                    <p>{this.props.passwordMessage}</p>
-                                </Message>
-                            )
+                            <Message positive>
+                                <p>{this.props.passwordMessage}</p>
+                            </Message>
+                        )
                     ) : null}
                 </Segment>
                 <Segment>

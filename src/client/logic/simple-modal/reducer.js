@@ -1,26 +1,22 @@
-import defaultState from 'client/logic/defaultState';
-import {
-  SHOW_MODAL,
-  CLOSE_MODAL
-} from './actionTypes';
+import defaultState from "client/logic/defaultState";
+import { SHOW_MODAL, CLOSE_MODAL } from "./actionTypes";
 
 function simpleModalReducer(state = defaultState.simpleModal, action) {
-  switch (action.type) {
-    case SHOW_MODAL:
-      return {
-        ...action.payload,
-        open: true
-      };
+    switch (action.type) {
+        case SHOW_MODAL:
+            return {
+                ...action.payload,
+                open: true
+            };
 
-    case CLOSE_MODAL:
-      return {
-        open: false
-      };
+        case CLOSE_MODAL:
+            return {
+                open: false
+            };
 
-
-    default:
-      return state;
-  }
+        default:
+            return state;
+    }
 }
 
 export default simpleModalReducer;

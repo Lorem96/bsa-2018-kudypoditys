@@ -1,4 +1,4 @@
-const Service = require('./generalService');
+const Service = require("./generalService");
 const facilityCategoryRepository = require("../repositories/facilityCategoryRepository");
 
 class FacilityCategoryService extends Service {

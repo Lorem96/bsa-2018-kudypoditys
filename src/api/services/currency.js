@@ -1,7 +1,6 @@
-const Service = require('./generalService');
+const Service = require("./generalService");
 const currencyRepository = require("../repositories/currencyRepository");
 
-class CurrencyService extends Service {
-}
+class CurrencyService extends Service {}
 
 module.exports = new CurrencyService(currencyRepository);

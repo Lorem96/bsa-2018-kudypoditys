@@ -45,7 +45,7 @@ export default class ReviewItem extends React.Component {
                                 total="10"
                                 value={this.props.Cleanliness}
                                 // label="Cleanliness"
-                                style={{margin:1}}
+                                style={{ margin: 1 }}
                             />
                             <span className="rating_name">Facilities</span>
                             <Progress
@@ -55,7 +55,7 @@ export default class ReviewItem extends React.Component {
                                 total="10"
                                 value={this.props.Facilities}
                                 // label="Facilities"
-                                style={{margin:1}}
+                                style={{ margin: 1 }}
                             />
                             <span className="rating_name">Comfort</span>
                             <Progress
@@ -65,7 +65,7 @@ export default class ReviewItem extends React.Component {
                                 total="10"
                                 value={this.props.Comfort}
                                 // label="Comfort"
-                                style={{margin:1}}
+                                style={{ margin: 1 }}
                             />
                             <span className="rating_name">Price</span>
                             <Progress
@@ -75,7 +75,7 @@ export default class ReviewItem extends React.Component {
                                 total="10"
                                 value={this.props.Price}
                                 // label="Price"
-                                style={{margin:1}}
+                                style={{ margin: 1 }}
                             />
                             <span className="rating_name">Location</span>
                             <Progress
@@ -85,7 +85,6 @@ export default class ReviewItem extends React.Component {
                                 total="10"
                                 value={this.props.Location}
                                 // label="Location"
-
                             />
                         </div>
 

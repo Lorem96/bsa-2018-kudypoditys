@@ -1,11 +1,5 @@
 import React from "react";
-import {
-    Header,
-    Comment,
-
-    Message,
-
-} from "semantic-ui-react";
+import { Header, Comment, Message } from "semantic-ui-react";
 
 import { connect } from "react-redux";
 
@@ -25,13 +19,7 @@ import {
 import RatingBar from "./ratingBar";
 import Modal from "../modal";
 
-
 export class Reviews extends React.Component {
-
-
-
-
-
     toggleVisibility = () =>
         this.setState({
             visible: !this.state.visible
@@ -57,10 +45,9 @@ export class Reviews extends React.Component {
     };
 
     render() {
-        const { property, user, bookings, } = this.props;
+        const { property, user, bookings } = this.props;
         let shouldRenderForm = false;
         let reviewLeft = false;
-
 
         const { visible } = this.state;
 
@@ -86,52 +73,54 @@ export class Reviews extends React.Component {
 
         let legitArray = getPropReviewsArray(bookings);
 
-        if (legitArray.length > 0 ) {
+        if (legitArray.length > 0) {
             shouldRenderForm = getPropToggler(legitArray, property, user);
-
         }
 
-        if ( property.reviews.length && user) {
-            reviewLeft = getPropToggler2(property, user)
+        if (property.reviews.length && user) {
+            reviewLeft = getPropToggler2(property, user);
         }
 
         return (
             <Comment.Group size="large" style={{ marginBottom: 20 }}>
                 {/*<Checkbox defaultChecked label='Show reviews' />*/}
-                {reviewLeft ? (<Message className="review_message">
-                    <div className="reviews_add_review__container">Dear Traveler. Thank you for your review and for
-                        choosing {property.name}.</div>
-
-                </Message>) : (
-                <Message className="review_message">
-                    100% verified reviews.
-                    {shouldRenderForm  ? (
+                {reviewLeft ? (
+                    <Message className="review_message">
                         <div className="reviews_add_review__container">
-                            Recently you visited {property.name}.
-                            <Modal
-                                className="reviews_add_review__modal"
-                                trigger={
-                                    <div
-                                        onClick={this.handleOpen}
-                                        className="reviews_add_review_btn"
-                                    >
-                                        Add review
-                                    </div>
-                                }
-                                open={this.state.modalOpen}
-                                // onClose={this.handleClose}
-                                closeOnDimmerClick={true}
-                                // closeIcon
-                                onClose={this.close}
-                            >
-                                <ReviewForm
-                                    property={property}
-                                    onFormClick={this.handleClose}
-                                />
-                            </Modal>
+                            Dear Traveler. Thank you for your review and for
+                            choosing {property.name}.
                         </div>
-                    ) : null}
-                </Message>
+                    </Message>
+                ) : (
+                    <Message className="review_message">
+                        100% verified reviews.
+                        {shouldRenderForm ? (
+                            <div className="reviews_add_review__container">
+                                Recently you visited {property.name}.
+                                <Modal
+                                    className="reviews_add_review__modal"
+                                    trigger={
+                                        <div
+                                            onClick={this.handleOpen}
+                                            className="reviews_add_review_btn"
+                                        >
+                                            Add review
+                                        </div>
+                                    }
+                                    open={this.state.modalOpen}
+                                    // onClose={this.handleClose}
+                                    closeOnDimmerClick={true}
+                                    // closeIcon
+                                    onClose={this.close}
+                                >
+                                    <ReviewForm
+                                        property={property}
+                                        onFormClick={this.handleClose}
+                                    />
+                                </Modal>
+                            </div>
+                        ) : null}
+                    </Message>
                 )}
                 {property.reviews.length === 0 ? (
                     <div>
@@ -152,10 +141,7 @@ export class Reviews extends React.Component {
                         <RatingBar property={property} />
 
                         {property.reviews.map((review, i) => (
-                            <Review
-                                key={i}
-                                reviewData={review}
-                            />
+                            <Review key={i} reviewData={review} />
                         ))}
                     </div>
                 )}

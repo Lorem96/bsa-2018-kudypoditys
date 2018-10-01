@@ -1,7 +1,6 @@
 import React from "react";
-import {Table} from "semantic-ui-react";
+import { Table } from "semantic-ui-react";
 import moment from "moment";
-
 
 function getDaysArrayByMonth() {
     let daysInMonth = moment().daysInMonth();
@@ -28,7 +27,6 @@ const listItems = daysArray.map((day, index) => (
     <Table.HeaderCell key={index}>
         {day.name}
         <br /> {day.number}
-
     </Table.HeaderCell>
 ));
 

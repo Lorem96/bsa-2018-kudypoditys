@@ -1,9 +1,10 @@
-import { facilitiesGet } from '../../logic/facilities/actions';
-import { languagesGet } from '../../logic/languages/actions';
+import { facilitiesGet } from "../../logic/facilities/actions";
+import { languagesGet } from "../../logic/languages/actions";
 import { getFormValues } from "redux-form";
 
 export function mapStateToProps(state) {
-    const { basicFacility } = getFormValues('propertyRegistrationForm')(state) || {};
+    const { basicFacility } =
+        getFormValues("propertyRegistrationForm")(state) || {};
     const { hasInternet, hasParking } = basicFacility || {};
 
     const { languages } = state.languages;
@@ -14,7 +15,7 @@ export function mapStateToProps(state) {
         hasParking,
         languages,
         facilities
-    }
+    };
 }
 
 export function mapDispatchToProps(dispatch) {
@@ -26,5 +27,5 @@ export function mapDispatchToProps(dispatch) {
         getFacilities() {
             dispatch(facilitiesGet());
         }
-    }
+    };
 }

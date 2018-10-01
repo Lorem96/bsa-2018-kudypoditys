@@ -1,18 +1,22 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import { Card, Icon, Image } from "semantic-ui-react";
 import PropTypes from "prop-types";
-import history from 'client/history';
+import history from "client/history";
 import { convert } from "../../helpers/convertCurrency";
 export class MapPropertyItem extends Component {
     nameClicked = () => {
-        history.push(`/property/${this.props.propertyId}`)
+        history.push(`/property/${this.props.propertyId}`);
     };
 
     render() {
         const { currency, propertyCurrency } = this.props;
 
-        const price = convert(propertyCurrency, this.props.price, currency.code);
+        const price = convert(
+            propertyCurrency,
+            this.props.price,
+            currency.code
+        );
 
         return (
             <Card
@@ -69,6 +73,6 @@ MapPropertyItem.propTypes = {
     rating: PropTypes.string
 };
 
-export default connect((state) => ({
+export default connect(state => ({
     currency: state.header.selectedCurrency
 }))(MapPropertyItem);

@@ -5,7 +5,6 @@ import * as staticData from "./staticData";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "./container";
 
-
 import "./index.scss";
 
 export class EditPersonalSettings extends Component {
@@ -28,11 +27,14 @@ export class EditPersonalSettings extends Component {
     render() {
         const { currencies, selectedCurrency, onCurrencyChange } = this.props;
 
-
         const formProps = {
             countryOptions: staticData.countryOptions,
             paymentOptions: staticData.paymentOptions,
-            currencyOptions: currencies.map(x => ({ key: x.id, value: x.id, text: x.code })),
+            currencyOptions: currencies.map(x => ({
+                key: x.id,
+                value: x.id,
+                text: x.code
+            })),
             selectedCurrency: selectedCurrency,
             appealOptions: staticData.appealOptions,
             currencies,

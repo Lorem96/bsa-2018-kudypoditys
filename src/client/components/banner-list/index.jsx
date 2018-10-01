@@ -36,15 +36,13 @@ export class BannerList extends Component {
     };
 
     render() {
-
-
-        const { cityInfos, currency} = this.props;
-        const {Dnipro, Kiev, Odessa, Lviv, Kharkiv, Ternopil} = cityInfos;
+        const { cityInfos, currency } = this.props;
+        const { Dnipro, Kiev, Odessa, Lviv, Kharkiv, Ternopil } = cityInfos;
 
         return (
-            <div className='container'>
-                <Grid >
-                    <Grid.Row columns='equal'>
+            <div className="container">
+                <Grid>
+                    <Grid.Row columns="equal">
                         <Grid.Column>
                             <Banner
                                 currency={currency}
@@ -66,7 +64,6 @@ export class BannerList extends Component {
                                 onClick={() => this.onCardClick("Ternopil")}
                             />
                         </Grid.Column>
-
                     </Grid.Row>
 
                     <Grid.Row columns={3}>

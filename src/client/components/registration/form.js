@@ -1,5 +1,5 @@
 import React from "react";
-import history from 'client/history';
+import history from "client/history";
 import { Field, reduxForm } from "redux-form";
 import { Button, Icon, Message, Segment } from "semantic-ui-react";
 import "client/components/registration/index.scss";
@@ -17,7 +17,7 @@ import {
 const RegistrationForm = props => {
     const { submitting, registerFeedback } = props;
     return (
-        <Segment className="registartion_form-wrapper" padded='very' raised >
+        <Segment className="registartion_form-wrapper" padded="very" raised>
             <form onSubmit={props.handleSubmit} id="registration-form">
                 {registerFeedback && registerFeedback.error ? (
                     <Message negative>
@@ -35,7 +35,7 @@ const RegistrationForm = props => {
                         required="required"
                         className="registration-c-input"
                         validate={[required, minLength2, maxLength20]}
-                        pointing={'left'}
+                        pointing={"left"}
                     />
                 </div>
 
@@ -49,7 +49,7 @@ const RegistrationForm = props => {
                         required="required"
                         className="registration-c-input"
                         validate={[required, email]}
-                        pointing={'left'}
+                        pointing={"left"}
                     />
                 </div>
 
@@ -63,7 +63,7 @@ const RegistrationForm = props => {
                         required="required"
                         className="registration-c-input "
                         validate={[required, phoneNumber]}
-                        pointing={'left'}
+                        pointing={"left"}
                     />
                 </div>
                 <div className="field-wrapper">
@@ -76,7 +76,7 @@ const RegistrationForm = props => {
                         required="required"
                         className="registration-c-input"
                         validate={[required, password, minLength8]}
-                        pointing={'left'}
+                        pointing={"left"}
                     />
                 </div>
                 <div className="btn-wrapper">
@@ -84,26 +84,27 @@ const RegistrationForm = props => {
                         className="auth_btn"
                         type="button"
                         icon
-                        labelPosition='left'
-                        onClick={() => history.goBack()}>
-                        <Icon name='left arrow' />
-                        Back</Button>
+                        labelPosition="left"
+                        onClick={() => history.goBack()}
+                    >
+                        <Icon name="left arrow" />
+                        Back
+                    </Button>
                     <Button
                         className="auth_btn"
                         type="submit"
                         name="register"
                         disabled={submitting}
                         icon
-                        color='blue'
-                        labelPosition='right'>
+                        color="blue"
+                        labelPosition="right"
+                    >
                         Sign Up
-                    <Icon name='right arrow' />
+                        <Icon name="right arrow" />
                     </Button>
-
-
                 </div>
             </form>
-        </Segment >
+        </Segment>
     );
 };
 

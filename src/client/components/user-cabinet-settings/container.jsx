@@ -7,16 +7,16 @@ import {
     avatarDelete
 } from "client/logic/user-cabinet-settings/actions";
 
-import { currenciesGet } from 'client/logic/currencies/actions';
+import { currenciesGet } from "client/logic/currencies/actions";
 
-import { selectCurrency } from 'client/logic/header/actions';
+import { selectCurrency } from "client/logic/header/actions";
 
 export function mapStateToProps(state) {
     const { userSettings, currencies, header } = state;
     return {
         ...userSettings,
         currencies: currencies.currencies || [],
-        selectedCurrency: header.selectedCurrency,
+        selectedCurrency: header.selectedCurrency
     };
 }
 
@@ -42,6 +42,6 @@ export function mapDispatchToProps(dispatch) {
         },
         onCurrencyChange(payload) {
             dispatch(selectCurrency(payload));
-        },
+        }
     };
 }

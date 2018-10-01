@@ -1,7 +1,6 @@
-import React, {Component} from "react";
-import {Container, Header} from "semantic-ui-react";
+import React, { Component } from "react";
+import { Container, Header } from "semantic-ui-react";
 import "./index.scss";
-
 
 export default class ErrorBoundary extends Component {
     constructor(props) {
@@ -9,7 +8,7 @@ export default class ErrorBoundary extends Component {
         this.state = {
             hasError: false,
             error: null,
-            info: null,
+            info: null
         };
     }
 
@@ -17,7 +16,7 @@ export default class ErrorBoundary extends Component {
         this.setState({
             hasError: true,
             error: error,
-            info: info.componentStack,
+            info: info.componentStack
         });
     }
 
@@ -26,9 +25,9 @@ export default class ErrorBoundary extends Component {
             return (
                 <Container className="error_boundary_handler-wrapper">
                     <Header>{this.state.error.message}</Header>
-                    <details style={{whiteSpace: 'pre-wrap'}}>
+                    <details style={{ whiteSpace: "pre-wrap" }}>
                         {this.state.error && this.state.error.toString()}
-                        <br/>
+                        <br />
                         {this.state.info}
                     </details>
                 </Container>

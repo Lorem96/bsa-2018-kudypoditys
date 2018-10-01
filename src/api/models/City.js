@@ -1,8 +1,7 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let City = orm.define('city', {
+let City = orm.define("city", {
     name: {
         type: Sequelize.STRING,
         validate: { notEmpty: true },
@@ -10,7 +9,7 @@ let City = orm.define('city', {
         unique: true
     },
     imageUrl: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
     }
 });
 

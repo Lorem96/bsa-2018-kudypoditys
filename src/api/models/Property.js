@@ -1,13 +1,10 @@
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
-
-let Property = orm.define('property', {
+let Property = orm.define("property", {
     name: {
         type: Sequelize.STRING,
-        validate: { notEmpty: true },
-
+        validate: { notEmpty: true }
     },
     address: {
         type: Sequelize.STRING,
@@ -21,7 +18,7 @@ let Property = orm.define('property', {
     },
     description: {
         type: Sequelize.TEXT,
-        validate: { notEmpty: true },
+        validate: { notEmpty: true }
         // allowNull: true
     },
     vatIncluded: {
@@ -33,12 +30,12 @@ let Property = orm.define('property', {
         allowNull: true
     },
     coordinates: {
-        type: Sequelize.JSON,
+        type: Sequelize.JSON
         // allowNull: false
     },
     rating: {
         type: Sequelize.FLOAT,
-        validate: { min: 0, max: 10, isFloat: true },
+        validate: { min: 0, max: 10, isFloat: true }
         // allowNull: true
     },
     contactPersonName: {
@@ -50,7 +47,5 @@ let Property = orm.define('property', {
         // allowNull: false
     }
 });
-
-
 
 module.exports = Property;

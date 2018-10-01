@@ -1,7 +1,4 @@
-import {
-    VERIFICATION_DATA_VERIFIED
-} from "./actionTypes";
-
+import { VERIFICATION_DATA_VERIFIED } from "./actionTypes";
 
 export default function emailVerificationReducer(state = {}, action) {
     switch (action.type) {
@@ -9,7 +6,7 @@ export default function emailVerificationReducer(state = {}, action) {
             return {
                 ...state,
                 verified: true
-            }
+            };
         }
         default: {
             return state;

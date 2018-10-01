@@ -4,10 +4,8 @@ import "./index.scss";
 // import { Header } from "semantic-ui-react";
 import Header from "client/components/header";
 
-
 export default class AddPropertyPage extends Component {
     render() {
-
         return (
             <Fragment>
                 <Header />

@@ -1,8 +1,7 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let Room = orm.define('room', {
+let Room = orm.define("room", {
     price: {
         type: Sequelize.INTEGER,
         validate: { min: 1, notEmpty: true },
@@ -17,14 +16,11 @@ let Room = orm.define('room', {
         type: Sequelize.FLOAT,
         validate: { min: 1, isFloat: true },
         allowNull: false
-
     },
     description: {
         type: Sequelize.TEXT,
         allowNull: true
     }
 });
-
-
 
 module.exports = Room;

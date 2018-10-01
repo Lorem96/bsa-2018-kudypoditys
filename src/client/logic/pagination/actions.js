@@ -1,10 +1,8 @@
-import {
-    PAGINATION_UPDATE
-} from './actionType';
+import { PAGINATION_UPDATE } from "./actionType";
 
-export const paginationUpdate = (payload) => {
+export const paginationUpdate = payload => {
     return {
-        type:PAGINATION_UPDATE,
+        type: PAGINATION_UPDATE,
         payload
-    }
+    };
 };

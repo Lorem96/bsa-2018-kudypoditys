@@ -1,7 +1,7 @@
 export const ratingScore = [
     {
         name: "Wonderful",
-        key:"Wonderful",
+        key: "Wonderful",
         label: "Wonderful",
         value: "Wonderful"
     },
@@ -14,13 +14,13 @@ export const ratingScore = [
     {
         name: "Good",
         key: "Good",
-        label:"Good",
+        label: "Good",
         value: "Good"
     },
     {
         name: "Pleasant",
         key: "Pleasant",
-        label:"Pleasant",
+        label: "Pleasant",
         value: "Pleasant"
     },
     {
@@ -36,32 +36,31 @@ export const ratingScore = [
         value: "No_rating"
     }
 ];
-export const priceScore= [
+export const priceScore = [
     {
         name: "US0_US30",
-        key:"US0_US30_for_night",
+        key: "US0_US30_for_night",
         label: "$0 - $30 per night",
         value: "US0_US30"
     },
     {
         name: "US30_US60",
-        key:"US30_US60_for_night",
+        key: "US30_US60_for_night",
         label: "$30 - $60 per night",
         value: "US30_US60"
     },
     {
         name: "US60_US90",
-        key:"US60_US90_for_night",
+        key: "US60_US90_for_night",
         label: "$60 - $90 per night",
         value: "US60_US90"
     },
     {
         name: "US90",
-        key:"US90_+_for_night",
+        key: "US90_+_for_night",
         label: "$90 + per night",
         value: "US90"
-    },
-
+    }
 ];
 export const bedsType = [
     {
@@ -79,17 +78,16 @@ export const bedsType = [
     {
         name: "Full_bed",
         key: "Full_bed",
-        label:"Full bed",
+        label: "Full bed",
         value: "Full_bed"
     },
     {
         name: "King_bed",
         key: "King_bed",
-        label:"King bed",
+        label: "King bed",
         value: "King_bed"
     }
 ];
-
 
 export const bedTypes = [
     {
@@ -153,6 +151,5 @@ export const bedTypes = [
         key: "Dogs",
         label: "Pets",
         value: "Dogs"
-
-    },
+    }
 ];

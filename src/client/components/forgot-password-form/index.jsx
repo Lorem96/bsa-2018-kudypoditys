@@ -1,18 +1,21 @@
-import React, { Component } from 'react';
-import history from 'client/history';
+import React, { Component } from "react";
+import history from "client/history";
 import {
-    Button, Form, Header, Container, Segment, Icon
+    Button,
+    Form,
+    Header,
+    Container,
+    Segment,
+    Icon
 } from "semantic-ui-react";
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm } from "redux-form";
 
-import { email, required } from 'client/regexValidationService';
-import renderField from 'client/components/input-form/renderField';
+import { email, required } from "client/regexValidationService";
+import renderField from "client/components/input-form/renderField";
 
 class ForgotPasswordForm extends Component {
     render() {
-        const {
-            handleSubmit, pristine, submitting, loading
-        } = this.props;
+        const { handleSubmit, pristine, submitting, loading } = this.props;
 
         return (
             <Container text className="registration-c-wrapper">
@@ -26,8 +29,12 @@ class ForgotPasswordForm extends Component {
                 >
                     Forgot password
                 </Header>
-                <Segment className="forgot_form-wrapper" padded='very' raised>
-                    <Form onSubmit={handleSubmit} loading={loading} id="forgot-password-form">
+                <Segment className="forgot_form-wrapper" padded="very" raised>
+                    <Form
+                        onSubmit={handleSubmit}
+                        loading={loading}
+                        id="forgot-password-form"
+                    >
                         <div className="field-wrapper">
                             <Field
                                 style={{ marginTop: "5%" }}
@@ -45,20 +52,23 @@ class ForgotPasswordForm extends Component {
                             <Button
                                 className="auth_btn"
                                 type="button"
-                                color='blue'
+                                color="blue"
                                 icon
-                                labelPosition='left'
-                                onClick={() => history.goBack()}>
-                                <Icon name='left arrow' />
-                                Back</Button>
+                                labelPosition="left"
+                                onClick={() => history.goBack()}
+                            >
+                                <Icon name="left arrow" />
+                                Back
+                            </Button>
                             <Button
                                 type="submit"
                                 disabled={submitting || pristine}
                                 icon
-                                color='blue'
-                                labelPosition='right'>
+                                color="blue"
+                                labelPosition="right"
+                            >
                                 Send Email
-                                <Icon name='send' />
+                                <Icon name="send" />
                             </Button>
                         </div>
                     </Form>
@@ -68,4 +78,4 @@ class ForgotPasswordForm extends Component {
     }
 }
 
-export default reduxForm({ form: 'forgotPassword' })(ForgotPasswordForm);
+export default reduxForm({ form: "forgotPassword" })(ForgotPasswordForm);

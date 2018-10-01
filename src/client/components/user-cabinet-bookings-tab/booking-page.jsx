@@ -7,7 +7,7 @@ import {
     Divider,
     Confirm
 } from "semantic-ui-react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import { Slider } from "../slider";
 import moment from "moment";
 import "./booking-page.scss";
@@ -81,7 +81,7 @@ class BookingPage extends React.Component {
                         header="Are you sure?"
                         content={`Do you really want to cancel your booking at ${
                             property.name
-                            }?`}
+                        }?`}
                         actions={[
                             {
                                 key: "no",

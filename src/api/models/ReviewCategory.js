@@ -1,8 +1,7 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let ReviewCategory = orm.define('reviewCategory', {
+let ReviewCategory = orm.define("reviewCategory", {
     name: {
         type: Sequelize.STRING,
         unique: true,

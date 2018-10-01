@@ -11,8 +11,8 @@ authRouter.route("/login").post((req, res) => {
             return;
         }
 
-        if (user.verifyEmailToken !== 'verified')
-            return res.status(403).send('Verify your email please');
+        if (user.verifyEmailToken !== "verified")
+            return res.status(403).send("Verify your email please");
 
         req.login(user, { session: false }, err => {
             if (err) res.status(400).send(err.message);

@@ -27,17 +27,16 @@ export function getAvgFromArray(array) {
     for (let i = 0; i < array.length; i++) {
         total += array[i];
     }
-    avg = total / array.length
+    avg = total / array.length;
     if (isNaN(avg)) {
-        return  0
+        return 0;
     }
 
-    return avg.toFixed(1) ;
+    return avg.toFixed(1);
 }
 
-export function getPropertyStatus(rating){
+export function getPropertyStatus(rating) {
     let ratingStatus = "";
-
 
     if (rating >= 9) {
         ratingStatus = "Wonderful";
@@ -49,31 +48,28 @@ export function getPropertyStatus(rating){
         ratingStatus = "Pleasant";
     } else if (rating === 0) {
         ratingStatus = "No rating";
-        }
-     else if (rating < 6) {
+    } else if (rating < 6) {
         ratingStatus = "It's Ok";
-
     }
 
-    return ratingStatus
+    return ratingStatus;
 }
 
 export function getPropertyColor(rating) {
     let ratingColor = "";
 
     if (rating >= 9) {
-        ratingColor = '#0a3d91'
+        ratingColor = "#0a3d91";
     } else if (rating >= 8) {
-        ratingColor = '#255ebc'
+        ratingColor = "#255ebc";
     } else if (rating >= 7) {
-        ratingColor = '#5473a8'
+        ratingColor = "#5473a8";
     } else if (rating >= 6) {
-        ratingColor = '#7b9ace'
+        ratingColor = "#7b9ace";
     } else if (rating === 0) {
-        ratingColor = '#44272b'
+        ratingColor = "#44272b";
+    } else if (rating < 6) {
+        ratingColor = "#9ab5e2";
     }
-    else if (rating < 6) {
-        ratingColor = '#9ab5e2'
-    }
-    return ratingColor
+    return ratingColor;
 }

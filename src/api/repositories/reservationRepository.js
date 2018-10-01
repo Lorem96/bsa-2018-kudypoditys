@@ -7,7 +7,7 @@ const PaymentType = require("../models/PaymentType");
 const Property = require("../models/Property");
 const Image = require(".././models/Image");
 const Review = require("../models/Review");
-const Currency = require('../models/Currency');
+const Currency = require("../models/Currency");
 
 class ReservationRepository extends Repository {
     findAll() {

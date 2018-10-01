@@ -21,7 +21,7 @@ export function registerSuccess(payload) {
                 message: payload.message
             }
         }
-    }
+    };
 }
 
 export function registerFailure(payload) {
@@ -33,5 +33,5 @@ export function registerFailure(payload) {
                 message: payload.message
             }
         }
-    }
+    };
 }

@@ -12,25 +12,29 @@ class Api {
     }
 
     sendAuthRequest = (url, type, payload) => {
-        return this.checkAccessToken().then(() =>
-            this.adapter.request({
-                url: url, // url
-                method: type.toUpperCase(), // 'get' -> 'GET'
-                data: payload, // body
-                headers: {
-                    ...this.getAuthHeader()
-                }
-            })
-        ).catch(this.handleApiError);
-    }
+        return this.checkAccessToken()
+            .then(() =>
+                this.adapter.request({
+                    url: url, // url
+                    method: type.toUpperCase(), // 'get' -> 'GET'
+                    data: payload, // body
+                    headers: {
+                        ...this.getAuthHeader()
+                    }
+                })
+            )
+            .catch(this.handleApiError);
+    };
 
     sendRequest = (url, type, payload) => {
-        return this.adapter.request({
-            url: url, // url
-            method: type.toUpperCase(), // 'get' -> 'GET'
-            data: payload // body
-        }).catch(this.handleApiError);
-    }
+        return this.adapter
+            .request({
+                url: url, // url
+                method: type.toUpperCase(), // 'get' -> 'GET'
+                data: payload // body
+            })
+            .catch(this.handleApiError);
+    };
 
     getAuthHeader() {
         const accessToken = cookies.getAccessToken();

@@ -1,4 +1,4 @@
-const Service = require('./generalService');
+const Service = require("./generalService");
 const paymentTypeRepository = require("../repositories/paymentTypeRepository");
 
 class PaymentTypeService extends Service {

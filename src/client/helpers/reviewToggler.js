@@ -29,16 +29,14 @@ export function getPropToggler(bookingArray, property, user) {
     }
     return b;
 }
-export function getPropToggler2( property, user) {
+export function getPropToggler2(property, user) {
     let b = 0;
 
-
-
-        for (let i = 0; i < property.reviews.length; i++) {
-            if (property.reviews[i].user.id === user.id) {
-                b = 1;
-                return b
-            }
+    for (let i = 0; i < property.reviews.length; i++) {
+        if (property.reviews[i].user.id === user.id) {
+            b = 1;
+            return b;
         }
+    }
     return b;
 }

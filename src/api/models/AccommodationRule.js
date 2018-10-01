@@ -1,10 +1,7 @@
-const
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
-
-let AccommodationRule = orm.define('accommodationRule', {
+let AccommodationRule = orm.define("accommodationRule", {
     allowPets: {
         type: Sequelize.BOOLEAN,
         allowNull: true

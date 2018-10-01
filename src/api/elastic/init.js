@@ -3,9 +3,8 @@ module.exports = {
         body: {
             mappings: {
                 document: {
-                    properties: {
-                    },
-                },
+                    properties: {}
+                }
             },
             settings: {
                 analysis: {
@@ -13,18 +12,18 @@ module.exports = {
                         autocomplete: {
                             type: "custom",
                             tokenizer: "standard",
-                            filter: ["lowercase", "autocomplete_filter"],
-                        },
+                            filter: ["lowercase", "autocomplete_filter"]
+                        }
                     },
                     filter: {
                         autocomplete_filter: {
                             type: "edge_ngram",
                             min_gram: 1,
-                            max_gram: 20,
-                        },
-                    },
-                },
-            },
-        },
-    },
+                            max_gram: 20
+                        }
+                    }
+                }
+            }
+        }
+    }
 };

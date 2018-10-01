@@ -1,8 +1,7 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let Image = orm.define('image', {
+let Image = orm.define("image", {
     url: {
         type: Sequelize.STRING,
         validate: { isUrl: true },

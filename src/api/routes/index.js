@@ -13,19 +13,19 @@ const discount = require("./discountRoutes");
 const roomDiscount = require("./roomDiscountRoutes");
 const bedInRoom = require("./bedInRoomRoutes");
 const searchProperty = require("./searchPropertyRoutes");
-const country = require('./countryRoutes');
-const facility = require('./facilityRoutes');
-const language = require('./languageRoutes');
+const country = require("./countryRoutes");
+const facility = require("./facilityRoutes");
+const language = require("./languageRoutes");
 const availability = require("./availabilityRoutes");
-const paymentType = require('./paymentTypeRoutes');
-const roomType = require('./roomTypeRoutes');
-const bedType = require('./bedTypeRoutes');
-const currency = require('./currencyRoutes');
-const propertyType = require('./propertyTypeRoutes');
+const paymentType = require("./paymentTypeRoutes");
+const roomType = require("./roomTypeRoutes");
+const bedType = require("./bedTypeRoutes");
+const currency = require("./currencyRoutes");
+const propertyType = require("./propertyTypeRoutes");
 
 const elasticsearch = require("./elasticsearchRoutes");
 
-module.exports = function (app) {
+module.exports = function(app) {
     app.use("/api", auth);
     app.use("/elastic", elasticsearch);
     app.use("/api/users", user);
@@ -43,12 +43,12 @@ module.exports = function (app) {
     app.use("/api/discount", discount);
     app.use("/api/room-discount", roomDiscount);
     app.use("/api/bed-in-room", bedInRoom);
-    app.use('/api/country', country);
+    app.use("/api/country", country);
     app.use("/api/search-property", searchProperty);
     app.use("/api/availability", availability);
-    app.use('/api/paymenttype', paymentType);
-    app.use('/api/roomtype', roomType);
-    app.use('/api/bedtype', bedType);
-    app.use('/api/currency', currency);
-    app.use('/api/propertytype', propertyType);
+    app.use("/api/paymenttype", paymentType);
+    app.use("/api/roomtype", roomType);
+    app.use("/api/bedtype", bedType);
+    app.use("/api/currency", currency);
+    app.use("/api/propertytype", propertyType);
 };

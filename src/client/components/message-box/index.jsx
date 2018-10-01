@@ -1,19 +1,21 @@
-import React, { Component } from 'react';
-import { Message } from 'semantic-ui-react';
+import React, { Component } from "react";
+import { Message } from "semantic-ui-react";
 
 export default class MessageBox extends Component {
-  render() {
-    const {
-      headerText, bodyText, error,
+    render() {
+        const {
+            headerText,
+            bodyText,
+            error,
 
-      color = error ? 'red' : color
-    } = this.props;
+            color = error ? "red" : color
+        } = this.props;
 
-    return (
-      <Message color={color}>
-        <Message.Header>{headerText}</Message.Header>
-        <p>{bodyText}</p>
-      </Message>
-    );
-  }
+        return (
+            <Message color={color}>
+                <Message.Header>{headerText}</Message.Header>
+                <p>{bodyText}</p>
+            </Message>
+        );
+    }
 }

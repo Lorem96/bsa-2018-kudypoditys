@@ -1,8 +1,7 @@
-const
-    Sequelize = require('sequelize'),
-    orm = require('../orm');
+const Sequelize = require("sequelize"),
+    orm = require("../orm");
 
-let Role = orm.define('role', {
+let Role = orm.define("role", {
     name: {
         type: Sequelize.STRING,
         unique: true,
@@ -11,4 +10,3 @@ let Role = orm.define('role', {
 });
 
 module.exports = Role;
-

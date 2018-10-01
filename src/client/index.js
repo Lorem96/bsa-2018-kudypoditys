@@ -7,7 +7,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import "client/styles/global.scss";
 import reducer from "client/logic/reducer";
-import ResetPasswordPage from 'client/pages/reset-password-page'
+import ResetPasswordPage from "client/pages/reset-password-page";
 import RegistrationPage from "client/pages/registration-page";
 import AddPropertyPage from "client/pages/add-property-page";
 import { Router, Route, Switch } from "react-router-dom";
@@ -24,7 +24,7 @@ import UserCabinet from "./pages/user-cabinet";
 import AuthHOC from "./components/auth-hoc";
 import VerifyEmail from "client/components/verify-email";
 import ForgotPasswordPage from "client/pages/forgot-password-page";
-import SimpleModal from 'client/components/simple-modal';
+import SimpleModal from "client/components/simple-modal";
 import ErrorBoundary from "client/components/error-boundary-handler";
 
 const sagaMiddelware = createSagaMidddelware();
@@ -45,8 +45,16 @@ ReactDOM.render(
                     <Route exact path="/signup" component={RegistrationPage} />
                     <Route exact path="/verifyemail" component={VerifyEmail} />
                     <Route exact path="/login" component={LoginPage} />
-                    <Route exact path="/resetpassword" component={ResetPasswordPage} />
-                    <Route exact path="/forgotpassword" component={ForgotPasswordPage} />
+                    <Route
+                        exact
+                        path="/resetpassword"
+                        component={ResetPasswordPage}
+                    />
+                    <Route
+                        exact
+                        path="/forgotpassword"
+                        component={ForgotPasswordPage}
+                    />
                     <Route path="/search-page" component={SearchPage} />
                     <Route path="/property/:id" component={PropertyPage} />
                     <Route

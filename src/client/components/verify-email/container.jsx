@@ -1,8 +1,7 @@
-import {sendVerificationData} from "client/logic/verify-email/actions";
-
+import { sendVerificationData } from "client/logic/verify-email/actions";
 
 export function mapStateToProps(state) {
-    const {userVerified} = state;
+    const { userVerified } = state;
     return {
         ...userVerified
     };
@@ -13,5 +12,5 @@ export function mapDispatchToProps(dispatch) {
         sendVerificationData() {
             dispatch(sendVerificationData());
         }
-    }
+    };
 }
