@@ -9,7 +9,6 @@ import shortParagraphImg from "./img/short-paragraph.png";
 export class Banner extends Component {
 
     handleClick(cityInfo) {
-        console.log('Hello from item')
         this.props.onClick(cityInfo)
     }
     render() {
@@ -20,7 +19,6 @@ export class Banner extends Component {
             background: `url(${url})`,
             backgroundSize: "cover"
         });
-        console.log(this.props)
 
         return cityInfo ? (
             <Container

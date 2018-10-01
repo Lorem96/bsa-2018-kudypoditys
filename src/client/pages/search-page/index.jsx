@@ -106,7 +106,6 @@ class SearchPage extends React.Component {
             latitude: JSON.parse(localStorage.getItem("lastPositionLat")),
             longitude: JSON.parse(localStorage.getItem("lastPositionLng"))
         };
-        console.log("this.state.showLoading = " + this.state.showLoading);
         return (
             <div className="mock">
                 <Header

@@ -49,7 +49,6 @@ class Quickfilter extends React.Component {
             searchRequest.Movie_nights = ""
             searchRequest.Dogs = ""
             this.props.selectFilter(searchRequest)
-            console.log("oooooo " +JSON.stringify(searchRequest))
         }
     }
     drawBoxes(arr) {

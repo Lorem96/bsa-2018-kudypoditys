@@ -10,7 +10,6 @@ var sqs = new AWS.SQS({ apiVersion: "2012-11-05" });
 
 class MailService {
     sendMail____(user, mailOptionsObj, action) {
-        console.log(user, mailOptionsObj);
         const mailOptions = {
             from: "kudypoditys@gmail.com",
             to: user.email,

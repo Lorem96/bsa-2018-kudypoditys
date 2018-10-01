@@ -252,8 +252,6 @@ export class MainSearch extends React.Component {
     }
 
     render() {
-         console.log("state=" + JSON.stringify(this.state));
-
         const selectOptionsRooms = this.generateOptions(1, 30);
         const selectOptionsAdults = this.generateOptions(1, 10);
         const {

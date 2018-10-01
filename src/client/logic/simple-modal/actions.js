@@ -6,8 +6,6 @@ export const modalShow = (payload) => ({
 });
 
 export const modalClose = () => {
-  console.log('modal close!!!')
-
   return {
     type: CLOSE_MODAL
   };

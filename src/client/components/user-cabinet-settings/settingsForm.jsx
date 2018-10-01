@@ -125,7 +125,6 @@ export class SettingsForm extends Component {
         this.updateSettings(data);
 
         const currency = this.props.currencies.find(x => x.id == value);
-        console.log(currency);
         this.props.onCurrencyChange(currency);
     }
 

@@ -5,7 +5,6 @@ import * as actionTypes from "./actionTypes";
 
 function* createReview(action) {
     try {
-        console.log(reviewService.createReview);
         const reviewResponse = yield call(
             reviewService.createReview,
             action.payload
@@ -23,7 +22,6 @@ function* createReview(action) {
 
 function* updateProperty(action) {
     try {
-        console.log(propertyService.updateProperty);
         const propertyResponse = yield call(
             propertyService.updateProperty,
             action.payload
