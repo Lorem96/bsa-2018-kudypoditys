@@ -1,17 +1,7 @@
 import React, { Fragment } from "react";
 import { mapStateToProps, mapDispatchToProps } from "./container";
 import { connect } from "react-redux";
-import {
-    Button,
-    Icon,
-    Image,
-    Item,
-    Label,
-    Card,
-    Header,
-    Message,
-    Segment
-} from "semantic-ui-react";
+import { Button, Header, Message, Segment } from "semantic-ui-react";
 import "./index.scss";
 import { PropertyItem } from "./propertyItem";
 import history from "client/history";
